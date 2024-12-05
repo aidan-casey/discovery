@@ -446,7 +446,8 @@ final class Discover implements DiscoverContract
                 if (Composer::satisfies(new Version(), $candidateEntity->getPackage(), $candidateEntity->getVersion())) {
                     $discovered[] = $candidateEntity;
                 }
-            } catch (Throwable) {}
+            } catch (Throwable) {
+            }
         }
 
         return $discovered;
